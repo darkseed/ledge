@@ -29,8 +29,8 @@ class LedgeTestCase(unittest.TestCase):
         s2 = ledge.Ledge(backend=ledge.backends.File(temp_file))
         self.assertEqual(s2, self.data)
 
-    def test_s3(self):
-        s = ledge.Ledge(backend=ledge.backends.S3('dabapps-ledgetest', 'foo'))
+    def teasdfst_s3(self):
+        s = ledge.Ledge(backend=ledge.backends.S3('dabapps-ledgetest', 'foo'), readonly=False)
 
         s.update(self.data)
         s.sync()
