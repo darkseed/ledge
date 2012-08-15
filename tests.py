@@ -23,12 +23,12 @@ class LedgeTestCase(unittest.TestCase):
         self.assertEqual(s2, self.data)
 
     def test_s3(self):
-        s = ledge.Ledge(backend=ledge.backends.S3('dabapps-shtoretest', 'foo'))
+        s = ledge.Ledge(backend=ledge.backends.S3('dabapps-ledgetest', 'foo'))
 
         s.update(self.data)
         s.sync()
 
-        s2 = ledge.Ledge(backend=ledge.backends.S3('dabapps-shtoretest', 'foo'))
+        s2 = ledge.Ledge(backend=ledge.backends.S3('dabapps-ledgetest', 'foo'))
         self.assertEqual(s2, self.data)
 
 
